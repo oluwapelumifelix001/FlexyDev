@@ -80,28 +80,28 @@ const skillCategories = [
   {
     title: 'Frontend',
     skills: [
-      { name: 'React', level: 95 },
-      { name: 'JavaScript', level: 90 },
-      { name: 'HTML/CSS', level: 92 },
-      { name: 'Tailwind CSS', level: 88 },
+      { name: 'React', level: 98 },
+      { name: 'JavaScript', level: 98 },
+      { name: 'HTML/CSS', level: 98 },
+      { name: 'Tailwind CSS', level: 98 },
     ],
   },
   {
     title: 'Backend',
     skills: [
-      { name: 'Node.js', level: 85 },
-      { name: 'Express', level: 82 },
-      { name: 'MongoDB', level: 80 },
-      { name: 'REST APIs', level: 85 },
+      { name: 'Node.js', level: 95 },
+      { name: 'Express', level: 98 },
+      { name: 'MongoDB', level: 98 },
+      { name: 'REST APIs', level: 98 },
     ],
   },
   {
     title: 'Tools',
     skills: [
-      { name: 'Git', level: 88 },
-      { name: 'VS Code', level: 90 },
-      { name: 'Figma', level: 75 },
-      { name: 'Vercel', level: 85 },
+      { name: 'Git', level: 98 },
+      { name: 'VS Code', level: 95 },
+      { name: 'Figma', level: 95 },
+      { name: 'Vercel', level: 95 },
     ],
   },
 ]
@@ -279,8 +279,8 @@ export function Skills() {
                 By The Numbers
               </h3>
               <div className="grid grid-cols-2 gap-4">
-                <StatCard value={3} suffix="+" label="Years Experience" color="blue" />
-                <StatCard value={25} suffix="+" label="Projects Completed" color="purple" />
+                <StatCard value={2} suffix="+" label="Years Experience" color="blue" />
+                <StatCard value={20} suffix="+" label="Projects Completed" color="purple" />
                 <StatCard value={15} suffix="+" label="Happy Clients" color="pink" />
                 <StatCard value={100} suffix="%" label="Commitment" color="green" />
               </div>

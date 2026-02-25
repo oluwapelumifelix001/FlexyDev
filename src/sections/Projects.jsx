@@ -1,64 +1,69 @@
 import { useRef, useState, useEffect } from 'react'
 import { ExternalLink, Github, ChevronLeft, ChevronRight, ArrowUpRight } from 'lucide-react'
-
+import zoomdrive from '/ZoomDrive.png'
+import Studyflow from '/studyflow.png'
+import ammie from '/ammie.png'
+import bims from '/bims2.png'
+import weather from '/weather.png'
+import Nova from '/Nova.png'
 const projects = [
   {
-    title: 'E-Commerce Platform',
-    description: 'Full-stack e-commerce solution with real-time inventory, Stripe payments, and admin dashboard. Built with scalability in mind.',
-    tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
-    github: 'https://github.com',
-    live: 'https://example.com',
+    title: 'Zoomdrive Car rentals',
+    description: 'A modern car rental platform that lets users browse, filter, and book vehicles seamlessly with transparent pricing and flexible dates.',
+    tags: ['React', 'Node.js', 'MongoDB','Express', 'Tailwind CSS'],
+    image: zoomdrive,
+    github: 'https://github.com/oluwapelumifelix001/ZoomDrive',
+    live: 'https://zoomdrive-frontend-awhy.vercel.app/',
     featured: true,
     color: 'from-blue-500 to-cyan-500',
   },
   {
-    title: 'Task Management App',
-    description: 'Collaborative task manager with real-time updates, drag-and-drop, and team workspaces. Features socket.io for live collaboration.',
-    tags: ['React', 'Socket.io', 'Express', 'MongoDB'],
-    image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop',
-    github: 'https://github.com',
-    live: 'https://example.com',
+    title: 'StudyFlow',
+    description: 'StudyFlow is a productivity web app designed to help students plan, stay organized, and stay connected while studying.Free Access to ai tools to enhance learning experience.',
+    tags: ['Html', 'Css', 'Javascript', 'Bootstrap'],
+    image: Studyflow,
+    github: 'https://github.com/oluwapelumifelix001/StudyFlow',
+    live: 'https://study-flow-omega.vercel.app/',
     featured: true,
     color: 'from-purple-500 to-pink-500',
   },
   {
-    title: 'AI Content Generator',
-    description: 'AI-powered content creation tool with GPT-4 integration and custom prompt templates. Automated content workflows.',
-    tags: ['Next.js', 'OpenAI', 'Tailwind', 'Vercel'],
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop',
-    github: 'https://github.com',
-    live: 'https://example.com',
+    title: 'Bims Luxe Scent',
+    description: 'A luxury fragrance e-commerce platform built with React and Tailwind CSS. Features product filtering, cart functionality, and responsive design.',
+    tags: ['React.js', 'framer motion', 'Tailwind', 'Vercel'],
+    image: bims,
+    github: 'https://github.com/oluwapelumifelix001/Bims-Luxe-Scent',
+    live: 'https://bimscent.vercel.app/',
     featured: false,
     color: 'from-green-500 to-emerald-500',
   },
   {
-    title: 'Analytics Dashboard',
-    description: 'Real-time data visualization dashboard with customizable widgets and export capabilities. D3.js powered charts.',
-    tags: ['React', 'D3.js', 'Node.js', 'PostgreSQL'],
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
-    github: 'https://github.com',
-    live: 'https://example.com',
+    title: 'Ammie Kripsy Crunch',
+    description: 'Ammie Kripsy Crunch is a dynamic recipe app that offers personalized meal recommendations based on user preferences and dietary needs. Built with React and Tailwind CSS, it features a sleek UI and seamless navigation.',
+    tags: ['React', 'Tailwind CSS', 'API Integration', 'Vercel'],
+    image: ammie,
+    github: 'https://github.com/oluwapelumifelix001/Ammie-Kripsy-Crunch',
+    live: 'https://ammie-kripsy-crunch.vercel.app/',
     featured: false,
     color: 'from-orange-500 to-red-500',
   },
   {
-    title: 'Social Media App',
-    description: 'Full-featured social platform with stories, messaging, and notifications. React Native for cross-platform support.',
-    tags: ['React Native', 'Firebase', 'Redux', 'Node.js'],
-    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop',
-    github: 'https://github.com',
-    live: 'https://example.com',
+    title: 'Flexy Weather App',
+    description: 'A sleek weather application that provides real-time forecasts and current conditions for any location. Built with React and Tailwind CSS, it features a clean UI and seamless API integration for accurate weather data.',
+    tags: ['Html', 'Css', 'Javascript', 'Api'],
+    image: weather,
+    github: 'https://github.com/oluwapelumifelix001/Weather-Project.git',
+    live: 'https://oluwapelumifelix001.github.io/Weather-Project/',
     featured: false,
     color: 'from-pink-500 to-rose-500',
   },
   {
-    title: 'Portfolio CMS',
-    description: 'Headless CMS for creative portfolios with markdown support and custom themes. GraphQL API for content delivery.',
-    tags: ['Next.js', 'GraphQL', 'Prisma', 'PostgreSQL'],
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
-    github: 'https://github.com',
-    live: 'https://example.com',
+    title: 'Nova Bank',
+    description: 'Html, Css and Bootstrap project that showcases a modern banking website design. Features responsive layout, interactive elements, and a sleek user interface for an engaging user experience.',
+    tags: ['Html', 'Css', 'Bootstrap'],
+    image: Nova,
+    github: 'https://github.com/oluwapelumifelix001/Nova-Bank',
+    live: 'https://oluwapelumifelix001.github.io/Novabank/',
     featured: false,
     color: 'from-indigo-500 to-purple-500',
   },
@@ -291,7 +296,7 @@ export function Projects() {
       {/* View All Link */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 text-center">
         <a
-          href="https://github.com/yourusername"
+          href="https://github.com/oluwapelumifelix001?tab=repositories"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-zinc-600 dark:text-zinc-400 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors group"

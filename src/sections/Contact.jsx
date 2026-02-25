@@ -10,7 +10,7 @@ export function Contact() {
         setIsSubmitting(true)
 
         const text = `*New Portfolio Contact*%0A%0A*Name:* ${formState.name}%0A*Email:* ${formState.email}%0A%0A*Message:*%0A${formState.message}`
-        const phoneNumber = '2348012345678'
+        const phoneNumber = '2347019577768'
 
         window.open(`https://wa.me/${phoneNumber}?text=${text}`, '_blank')
 
@@ -55,7 +55,7 @@ export function Contact() {
                                 </div>
                                 <div>
                                     <div className="font-medium">WhatsApp</div>
-                                    <div className="text-sm text-zinc-500 dark:text-zinc-500">+234 801 234 5678</div>
+                                    <div className="text-sm text-zinc-500 dark:text-zinc-500">+234 70 1957 7768</div>
                                 </div>
                                 <ArrowUpRight size={20} className="ml-auto opacity-0 group-hover:opacity-100 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />
                             </a>
@@ -69,7 +69,7 @@ export function Contact() {
                                 </div>
                                 <div>
                                     <div className="font-medium">Email</div>
-                                    <div className="text-sm text-zinc-500 dark:text-zinc-500">your.email@example.com</div>
+                                    <div className="text-sm text-zinc-500 dark:text-zinc-500">oluwapelumifelix621@gmail.com</div>
                                 </div>
                             </a>
 
@@ -79,7 +79,7 @@ export function Contact() {
                                 </div>
                                 <div>
                                     <div className="font-medium">Location</div>
-                                    <div className="text-sm text-zinc-500 dark:text-zinc-500">Lagos, Nigeria</div>
+                                    <div className="text-sm text-zinc-500 dark:text-zinc-500">Ogbomoso, Nigeria</div>
                                 </div>
                             </div>
                         </div>
@@ -101,7 +101,7 @@ export function Contact() {
                             </div>
                             <div>
                                 <h3 className="font-semibold text-lg text-zinc-900 dark:text-white">Send to WhatsApp</h3>
-                                <p className="text-sm text-zinc-500 dark:text-zinc-500">Direct message, no backend needed</p>
+                                <p className="text-sm text-zinc-500 dark:text-zinc-500">Direct message</p>
                             </div>
                         </div>
 

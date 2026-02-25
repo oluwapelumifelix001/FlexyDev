@@ -1,11 +1,13 @@
 import { Github, Linkedin, Twitter, Instagram, ArrowUp, Heart } from 'lucide-react'
 
+
 const socialLinks = [
-    { icon: Github, href: 'https://github.com/yourusername', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com/in/yourusername', label: 'LinkedIn' },
-    { icon: Twitter, href: 'https://twitter.com/yourusername', label: 'Twitter' },
-    { icon: Instagram, href: 'https://instagram.com/yourusername', label: 'Instagram' },
+    { icon: Github, href: 'https://github.com/oluwapelumifelix001', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/felix-oluwapelumi-abb539367', label: 'LinkedIn' },
+    { icon: Twitter, href: 'https://twitter.com/FelixOluwa39213', label: 'Twitter' },
+    { icon: Instagram, href: 'https://instagram.com/big_flexy01', label: 'Instagram' }
 ]
+
 
 const footerLinks = [
     {
@@ -43,7 +45,7 @@ export function Footer() {
                         >
                             FLEXY DEV
                         </a>
-                        <p className="text-zinc-900 text-sm leading-relaxed mb-6 max-w-xs  white:bg-zinc-950">
+                        <p className="text-zinc-900 dark:text-zinc-300 text-sm leading-relaxed mb-6 max-w-xs  white:bg-zinc-950">
                             Building digital experiences that make a difference.
                             Let's create something amazing together.
                         </p>
@@ -65,13 +67,13 @@ export function Footer() {
 
                     {footerLinks.map((group) => (
                         <div key={group.title}>
-                            <h4 className="font-semibold text-white mb-4">{group.title}</h4>
+                            <h4 className="font-semibold  text-zinc-900 mb-4 dark:text-zinc-100">{group.title}</h4>
                             <ul className="space-y-3">
                                 {group.links.map((link) => (
                                     <li key={link.name}>
                                         <a
                                             href={link.href}
-                                            className="text-sm text-zinc-400 hover:text-white transition-colors"
+                                            className="text-sm text-zinc-800 hover:text-white transition-colors dark:text-zinc-400"
                                         >
                                             {link.name}
                                         </a>

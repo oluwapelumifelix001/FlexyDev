@@ -1,10 +1,11 @@
 import { useEffect, useState, useRef } from 'react'
-import { ArrowDown, Github, Linkedin, Twitter, Cpu } from 'lucide-react'
+import { ArrowDown, Github, Linkedin, Twitter, Cpu, Code2, Terminal } from 'lucide-react'
+import  pic from '/Flexy.jpg'
 
 const socials = [
-    { icon: Github, href: 'https://github.com/yourusername', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com/in/yourusername', label: 'LinkedIn' },
-    { icon: Twitter, href: 'https://twitter.com/yourusername', label: 'Twitter' },
+    { icon: Github, href: 'https://github.com/oluwapelumifelix001', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/felix-oluwapelumi-abb539367', label: 'LinkedIn' },
+    { icon: Twitter, href: 'https://twitter.com/FelixOluwa39213', label: 'Twitter' },
 ]
 
 // 3D Tilt effect hook
@@ -100,8 +101,18 @@ export function Hero() {
                     0% { transform: rotate(0deg); }
                     100% { transform: rotate(360deg); }
                 }
+                @keyframes orbit {
+                    from { transform: rotate(0deg) translateX(80px) rotate(0deg); }
+                    to { transform: rotate(360deg) translateX(80px) rotate(-360deg); }
+                }
+                @keyframes orbit-reverse {
+                    from { transform: rotate(360deg) translateX(60px) rotate(-360deg); }
+                    to { transform: rotate(0deg) translateX(60px) rotate(0deg); }
+                }
                 .animate-gradient-x { background-size: 200% 200%; animation: gradient-x 3s ease infinite; }
                 .animate-border-rotate { animation: border-rotate 4s linear infinite; }
+                .animate-orbit { animation: orbit 20s linear infinite; }
+                .animate-orbit-reverse { animation: orbit-reverse 15s linear infinite; }
             `}</style>
 
             <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
@@ -131,7 +142,7 @@ export function Hero() {
                             >
                                 <div className="relative w-full h-full">
                                     <img 
-                                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" 
+                                        src={pic} 
                                         alt="Felix Oluwapelumi"
                                         className="w-full h-full object-cover"
                                     />
@@ -143,6 +154,20 @@ export function Hero() {
                                 <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-cyan-500" />
                                 <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-cyan-500" />
                                 <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-cyan-500" />
+                            </div>
+
+                            {/* Orbiting icons - ADDED THESE TWO */}
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none">
+                                <div className="absolute animate-orbit" style={{ top: '50%', left: '50%', marginTop: '-12px', marginLeft: '-12px' }}>
+                                    <div className="p-2 bg-white dark:bg-zinc-900 rounded-full border border-cyan-500/50 text-cyan-600 dark:text-cyan-400 shadow-lg shadow-cyan-500/20">
+                                        <Code2 size={16} />
+                                    </div>
+                                </div>
+                                <div className="absolute animate-orbit-reverse" style={{ top: '50%', left: '50%', marginTop: '-12px', marginLeft: '-12px', animationDelay: '-5s' }}>
+                                    <div className="p-2 bg-white dark:bg-zinc-900 rounded-full border border-purple-500/50 text-purple-600 dark:text-purple-400 shadow-lg shadow-purple-500/20">
+                                        <Terminal size={16} />
+                                    </div>
+                                </div>
                             </div>
 
                             {/* Status indicator */}

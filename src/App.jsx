@@ -5,6 +5,7 @@ import { Projects } from './sections/Projects'
 import { Skills } from './sections/Skills'
 import { Contact } from './sections/Contact'
 import { Footer } from './sections/Footer'
+import { FixedThemeToggle } from './components/FixedThemetoggle'
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                     <Projects />
                     <Contact />
                     <Footer />
+                    <FixedThemeToggle />
                 </main>
             </div>
         </ThemeProvider>
