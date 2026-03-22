@@ -5,8 +5,18 @@ import Studyflow from '/studyflow.png'
 import ammie from '/ammie.png'
 import bims from '/bims2.png'
 import weather from '/weather.png'
-import Nova from '/Nova.png'
+import technova from '/TechNova.png'
 const projects = [
+    {
+    title: 'Tech Nova',
+    description: 'TechNova is an AI-powered science and technology news platform that curates complex breakthroughs—from AI and robotics to space exploration—into digestible, personalized insights. It combines smart curation with an interactive assistant, "Nova," to help users stay informed without the information overload.',
+    tags: ['React', 'Rest API', 'Tailwind CSS'],
+    image: technova,
+    github: 'https://github.com/oluwapelumifelix001/Tech-Nova.git',
+    live: 'https://tech-nova-ashen-iota.vercel.app/',
+    featured: true,
+    color: 'from-blue-500 to-cyan-500',
+  },
   {
     title: 'Zoomdrive Car rentals',
     description: 'A modern car rental platform that lets users browse, filter, and book vehicles seamlessly with transparent pricing and flexible dates.',
@@ -57,16 +67,7 @@ const projects = [
     featured: false,
     color: 'from-pink-500 to-rose-500',
   },
-  {
-    title: 'Nova Bank',
-    description: 'Html, Css and Bootstrap project that showcases a modern banking website design. Features responsive layout, interactive elements, and a sleek user interface for an engaging user experience.',
-    tags: ['Html', 'Css', 'Bootstrap'],
-    image: Nova,
-    github: 'https://github.com/oluwapelumifelix001/Nova-Bank',
-    live: 'https://oluwapelumifelix001.github.io/Novabank/',
-    featured: false,
-    color: 'from-indigo-500 to-purple-500',
-  },
+
 ]
 
 export function Projects() {
